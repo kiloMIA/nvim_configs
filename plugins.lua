@@ -9,6 +9,10 @@ local plugins = {
         "mypy",
         "ruff-lsp",
         "pyright",
+        "gofumpt",
+        "goimports",
+        "golines"
+
       },
     },
   },
