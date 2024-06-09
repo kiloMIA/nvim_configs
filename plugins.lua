@@ -11,8 +11,8 @@ local plugins = {
         "pyright",
         "gofumpt",
         "goimports",
-        "golines"
-
+        "golines",
+        "omnisharp"
       },
     },
   },

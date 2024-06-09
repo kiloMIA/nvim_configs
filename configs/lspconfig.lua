@@ -32,3 +32,18 @@ lspconfig.ruff_lsp.setup {
   capabilities = capabilities,
   filetypes = {"python"},
 }
+
+lspconfig.omnisharp.setup {
+  cmd = { vim.fn.stdpath("data") .. "/mason/packages/omnisharp/OmniSharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+  filetypes = { "cs", "vb" },
+  root_dir = util.root_pattern(".git", "*.sln", "*.csproj"),
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    omnisharp = {
+      enableRoslynAnalyzers = true,
+      enableEditorConfigSupport = true,
+      organizeImportsOnFormat = true,
+    }
+  }
+}
